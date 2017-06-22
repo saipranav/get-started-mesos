@@ -14,7 +14,7 @@ resource "aws_instance" "mesos_master" {
     }
 }
 
-resource "aws_instance" "mesos_slave1" {
+resource "aws_instance" "mesos_agent1" {
     ami = "${var.ami}"
     subnet_id = "${aws_subnet.default.id}"
     instance_type = "${var.instance_type}"
@@ -30,7 +30,7 @@ resource "aws_instance" "mesos_slave1" {
     }
 }
 
-resource "aws_instance" "mesos_slave2" {
+resource "aws_instance" "mesos_agent2" {
     ami = "${var.ami}"
     subnet_id = "${aws_subnet.default.id}"
     instance_type = "${var.instance_type}"
