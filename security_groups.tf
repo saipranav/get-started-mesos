@@ -7,6 +7,7 @@ resource "aws_security_group" "default" {
         to_port         = 0
         protocol        = "tcp"
         self            = "true"
+        cidr_blocks     = ["${split(",", var.security_group_ips)}"]
     }
 
     ingress {
@@ -14,6 +15,7 @@ resource "aws_security_group" "default" {
         to_port         = -1
         protocol        = "icmp"
         self            = "true"
+        cidr_blocks     = ["${split(",", var.security_group_ips)}"]
     }
 
     egress {

@@ -11,6 +11,14 @@ variable "ssh_public_key" {
     default = "<paste your ssh public key which starts with ssh-rsa and ends with email address>"
 }
 
+variable "security_group_ips" {
+   ## This should be your current Internet facing IP.
+   ## This can be found by running the following command:
+   ## curl https://api.ipify.org/
+   ## And then add '/32' to the address it returns.
+   default = "69.242.22.1/32,69.242.22.2/32"
+}
+
 ##############################
 ## Instance Defaults
 ##----------------------------
