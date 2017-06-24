@@ -4,7 +4,8 @@
 # https://docs.docker.com/engine/installation/linux/ubuntu/#install-using-the-repository
 
 # Prerequisites
-sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+sudo apt-get update -y
+sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 
 # Add the docker gpg key
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
